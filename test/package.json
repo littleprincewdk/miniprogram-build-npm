@@ -1,0 +1,9 @@
+{
+  "scripts": {
+    "build": "node ./index.js"
+  },
+  "dependencies": {
+    "dayjs": "^1.9.6",
+    "redux": "^4.0.5"
+  }
+}

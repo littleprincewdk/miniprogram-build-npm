@@ -1,0 +1,7 @@
+.idea/
+.DS_Store
+.vscode/
+.git/
+
+node_modules/
+test/miniprogram_npm
