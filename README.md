@@ -47,7 +47,7 @@ Type: `cjs | esm` Default: `cjs`
 具体输出格式需要看引入的包支持不支持相关格式，如果包本身发布时只发布了`es5`的格式，那么即使指定`esm`也无效，会原样打包
 
 ```bash
-$ miniprogram-build-npm --format esm
+miniprogram-build-npm --format esm
 ```
 
 ### `--sourcemap`/`-s`
@@ -57,7 +57,17 @@ Type: `boolean` Default: `false`
 开启`sourcemap`
 
 ```bash
-$ miniprogram-build-npm --sourcemap
+miniprogram-build-npm --sourcemap
+```
+
+### `--replace`/`-r`
+
+Type: `object` Default: `{}`
+
+see [@rollup/plugin-replace](https://github.com/rollup/plugins/tree/master/packages/replace)
+
+```bash
+miniprogram-build-npm --replace process.env.NODE_ENV=production --replace foo=bar
 ```
 
 ## API
@@ -71,5 +81,8 @@ build({
   output: 'libs',
   format: 'esm',
   sourcemap: false,
+  replace: {
+    'process.env.NODE_ENV': JSON.stringify('ENV'),
+  }
 });
 ```
