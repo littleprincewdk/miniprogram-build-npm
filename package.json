@@ -8,6 +8,8 @@
     "npm"
   ],
   "author": "littleprincewdk <2889110370@qq.com>",
+  "repository": "https://github.com/littleprincewdk/miniprogram-build-npm",
+  "homepage": "https://github.com/littleprincewdk/miniprogram-build-npm#readme",
   "license": "MIT",
   "scripts": {
     "test": "cd test && npm run build",
